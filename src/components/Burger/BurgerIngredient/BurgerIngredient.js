@@ -30,6 +30,7 @@ class BurgerIngredient extends Component {
                 break;
             case ('Bacon'):
                 ingredient = <div className={classes.Bacon}></div>
+                break;
             default:
                 ingredient = null;
         }
