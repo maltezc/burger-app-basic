@@ -14,7 +14,6 @@ class ContactData extends Component {
                 elementConfig: {
                     type: 'text',
                     placeholder: 'Your Name',
-
                 },
                 value: '',
             },
@@ -23,7 +22,6 @@ class ContactData extends Component {
                 elementConfig: {
                     type: 'text',
                     placeholder: 'Street',
-
                 },
                 value: '',
             },
@@ -32,7 +30,6 @@ class ContactData extends Component {
                 elementConfig: {
                     type: 'text',
                     placeholder: 'ZIP Code',
-
                 },
                 value: '',
             },
@@ -41,14 +38,13 @@ class ContactData extends Component {
                 elementConfig: {
                     type: 'text',
                     placeholder: 'Country',
-
                 },
                 value: '',
             },
             email: {
                 elementType: 'input',
                 elementConfig: {
-                    type: 'text',
+                    type: 'email',
                     placeholder: 'Your E-mail',
 
                 },
@@ -61,7 +57,6 @@ class ContactData extends Component {
                         {value: 'fastest', displayValue:'Fastest'},
                         {value: 'cheapest', displayValue:'Cheapest'},
                         ],
-
                 },
                 value: '',
             },
@@ -76,7 +71,7 @@ class ContactData extends Component {
             ingredients: this.props.ingredients,
             price: this.props.price, //
             // for production, do this calculation
-            // on the server so user can manipulate
+            // on the server so user cant manipulate
 
         }
         axios.post('/orders.json', order)
@@ -86,16 +81,26 @@ class ContactData extends Component {
             })
             .catch(error => {
                 this.setState({ loading: false });
-            });
+            } );
          }
 
     render () {
+        const formElementsArray = [];
+        for (let key in this.state.orderForm) {
+            formElementsArray.push({
+                id: key,
+                config: this.state.orderForm[key]
+            });
+        }
         let form = (
             <form>
-                <Input elementType="..." elementConfig="..." value="..." />
-                <Input inputtype="input" type="text" name="email" placeholder="Your Mail" />
-                <Input inputtype="input" type="text" name="street" placeholder="Street" />
-                <Input inputtype="input" type="text" name="postal" placeholder="Postal Code" />
+                {formElementsArray.map(formElement => (
+                    <Input
+                        key={formElement.id}
+                        elementType={formElement.config.elementType}
+                        elementConfig={formElement.config.elementConfig}
+                        value={formElement.config.value}  />
+                ))}
                 <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
             </form>
         );
