@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e7c45-91f5-42d9-8ab6-388b4bc34feb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Input.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +60,8 @@
       <file leaf-file-name="ContactData.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+            <state relative-caret-position="271">
+              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -122,6 +121,7 @@
       <find>purchaseable</find>
       <find>state</find>
       <find>.loader</find>
+      <find>ordere</find>
     </findStrings>
     <replaceStrings>
       <replace>.Loader</replace>
@@ -874,8 +874,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        <state relative-caret-position="271">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
