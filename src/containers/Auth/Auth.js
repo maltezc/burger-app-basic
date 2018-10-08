@@ -81,9 +81,6 @@ class Auth extends Component {
      }
 
 
-
-
-
     render () {
         const formElementsArray = [];
         for (let key in this.state.controls) {
