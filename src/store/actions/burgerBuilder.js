@@ -29,7 +29,7 @@ export const fetchIngredientsFailed = () => {
 };
 
 export const initIngredients = () => {
-    return dispatch => {
+    return {
         type: actionTypes.INIT_INGREDIENTS
     }
 }
