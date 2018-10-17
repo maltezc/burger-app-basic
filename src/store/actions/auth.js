@@ -37,14 +37,14 @@ export const logout = () => {
 export const checkAuthTimeout = (expirationTime) => {
     return dispatch => {
         setTimeout(() => {
-            dispatch(logout());
+            // dispatch(logout());
         }, expirationTime * 1000);
     }
 }
 
 export const auth = (email, password, isSignup) => {
     return dispatch => {
-        dispatch(authStart());
+        // dispatch(authStart());
         const authData = {
             email: email,
             password: password,
@@ -82,11 +82,11 @@ export const authCheckState = () => {
     return dispatch => {
         const token = localStorage.getItem('token');
         if (!token) {
-            dispatch(logout());
+            // dispatch(logout());
         } else {
             const expirationDate = new Date(localStorage.getItem('expirationDate'));
             if (expirationDate <= new Date()) {
-                dispatch(logout());
+                // dispatch(logout());
             } else {
                 const userId = localStorage.getItem('userId');
                 dispatch(authSuccess(token, userId))
